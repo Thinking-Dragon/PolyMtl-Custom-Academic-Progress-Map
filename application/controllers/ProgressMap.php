@@ -8,6 +8,6 @@ class ProgressMap extends CI_Controller {
     {
         $this->load->model($this->course_model);
 
-        $this->load->view('progress_map');
+        $this->load->view('progress_map', ['courses' => $this->{$this->course_model}->get_all()]);
     }
 }
