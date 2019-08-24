@@ -12,11 +12,13 @@ class Course_model extends CI_Model {
 
         public function get_all()
         {
+                $this->db->select('sigle, name, credits');
                 return $this->db->get('Courses')->result();
         }
 
         public function get_one($sigle)
         {
+                $this->db->select('sigle, name, credits');
                 $this->db->where('sigle', $sigle);
                 return $this->db->get('Courses')->row();
         }
