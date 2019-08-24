@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['api/courses'] = 'Course/get_all';
 $route['api/courses/(:any)'] = 'Course/get_one/$1';
-$route['default_controller'] = 'welcome';
+$route['progress-map'] = 'ProgressMap/display';
+$route['default_controller'] = 'ProgressMap/display';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
