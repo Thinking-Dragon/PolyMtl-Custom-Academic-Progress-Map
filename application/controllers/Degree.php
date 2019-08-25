@@ -11,10 +11,10 @@ class Degree extends CI_Controller {
         echo json_encode($data);
     }
     
-    public function get_one($name)
+    public function get_one($short_name)
     {
         $this->load->model($this->model_name);
-        $data = $this->{$this->model_name}->get_one($name);
+        $data = $this->{$this->model_name}->get_one($short_name);
         echo json_encode($data);
     }
 }

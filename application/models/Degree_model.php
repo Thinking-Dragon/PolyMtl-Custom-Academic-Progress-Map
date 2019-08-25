@@ -10,14 +10,14 @@ class Degree_model extends CI_Model {
 
         public function get_all()
         {
-                $this->db->select('name');
+                $this->db->select('short_name');
                 return $this->db->get('Degrees')->result();
         }
 
-        public function get_one($name)
+        public function get_one($short_name)
         {
-                $this->db->select('name');
-                $this->db->where('name', $name);
+                $this->db->select('name, short_name');
+                $this->db->where('short_name', $short_name);
                 return $this->db->get('Courses')->row();
         }
 }
