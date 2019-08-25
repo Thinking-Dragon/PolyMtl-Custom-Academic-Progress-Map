@@ -10,6 +10,13 @@ class Course extends CI_Controller {
         $data = $this->{$this->model_name}->get_all();
         echo json_encode($data);
     }
+
+    public function get_all_from_degree($degree_short_name)
+    {
+        $this->load->model($this->model_name);
+        $data = $this->{$this->model_name}->get_all_from_degree($degree_short_name);
+        echo json_encode($data);
+    }
     
     public function get_one($sigle)
     {
