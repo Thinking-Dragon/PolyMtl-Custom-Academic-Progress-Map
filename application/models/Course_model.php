@@ -18,7 +18,7 @@ class Course_model extends CI_Model {
 
         public function get_all_from_degree($degree_short_name)
         {
-                $this->db->select('sigle, name, credits');
+                $this->db->select('sigle, name, credits, semesterOrder');
                 $this->db->join('DegreesCourses', 'DegreesCourses.idCourse = Courses.idCourse');
                 $this->db->from('Courses');
                 return $this->db->get()->result();
