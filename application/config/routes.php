@@ -55,6 +55,6 @@ $route['api/degrees'] = 'Degree/get_all';
 $route['api/degrees/(:any)'] = 'Course/get_one/$1';
 $route['api/degrees/(:any)/courses'] = 'Course/get_all_from_degree/$1';
 $route['progress-map'] = 'ProgressMap/display';
-$route['default_controller'] = 'ProgressMap/display';
+$route['default_controller'] = 'Home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
